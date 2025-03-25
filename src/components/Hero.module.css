@@ -1,0 +1,79 @@
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  background-color: transparent;
+  position: relative; /* For shape dividers */
+  overflow: hidden; /* Hide parts of the shape dividers that might overflow */
+}
+
+.heroContent {
+  flex: 1;
+  padding-right: 50px; /* Space between text and image */
+  z-index: 2;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.heroImage {
+  flex: 1;
+  z-index: 2;
+}
+
+.heroImage img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ctaButton {
+  background-color: #e74c3c; /* Example color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.ctaButton:hover {
+  background-color: #c0392b; /* Darker shade on hover */
+}
+
+/* Shape Divider Styles */
+.shapeDividerTop, .shapeDividerBottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    filter: blur(10px);
+}
+
+.shapeDividerTop {
+    top: 0;
+    transform: skewY(-2deg);
+}
+
+.shapeDividerBottom {
+    bottom: 0;
+    transform: skewY(2deg);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .heroContainer {
+    flex-direction: column; /* Stack content vertically on small screens */
+    padding: 20px;
+  }
+
+  .heroContent {
+    padding-right: 0; /* Remove horizontal padding */
+    margin-bottom: 20px; /* Space between text and image */
+    text-align: center; /* Center text on mobile */
+  }
+}

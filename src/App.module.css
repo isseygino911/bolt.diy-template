@@ -1,0 +1,119 @@
+.app {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: transparent;
+}
+
+.shapeDecoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  background-color: rgba(100, 181, 246, 0.15);
+  opacity: 0.8;
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 20%;
+}
+
+.rectangle {
+  width: 200px;
+  height: 100px;
+  top: 70%;
+  right: 15%;
+  transform: rotate(30deg);
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 140px solid rgba(100, 181, 246, 0.15);
+  bottom: 10%;
+  left: 35%;
+}
+
+.purpleSquare {
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left: 85%;
+  background-color: rgba(153, 51, 255, 0.4);
+  border-radius: 10px;
+}
+
+.yellowPolygon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 204, 0, 0.2);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  bottom: 30%;
+  right: 30%;
+}
+
+.header {
+  background-color: #f0f0f0;
+  padding: 50px;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 20px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.content {
+  padding: 30px;
+  text-align: center;
+}
+
+.content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
